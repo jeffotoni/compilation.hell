@@ -1,7 +1,7 @@
 // Go in action
 // @jeffotoni
 
-/// curl localhost:8080/api/hello
+/// curl -i localhost:8080/hello
 //////////////////////////////////////
 
 package main
