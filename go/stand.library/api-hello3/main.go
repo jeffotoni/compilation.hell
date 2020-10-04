@@ -8,6 +8,7 @@ func Hello(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	println("Starting server at 0.0.0.0:8080")
 	mux := http.NewServeMux()
 	mux.Handle("/hello", http.HandlerFunc(Hello))
 	server :=

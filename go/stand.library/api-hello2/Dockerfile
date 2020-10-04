@@ -6,7 +6,6 @@ ENV GO111MODULE=on
 #RUN CGO_ENABLED=0 GOOS=linux go build --trimpath -o api.hello2 main.go
 RUN CGO_ENABLED=0 go build --trimpath -ldflags="-s -w" -o api.hello2 main.go
 RUN cp api.hello2 /go/bin/api.hello2
-RUN cp config.yaml /go/bin/config.yaml
 RUN ls -lh
 
 FROM alpine:latest AS final
@@ -15,6 +14,5 @@ RUN apk add --no-cache tzdata
 ENV TZ="America/Sao_Paulo"
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 COPY --from=builder /go/bin/api.hello2 /
-COPY --from=builder /go/bin/config.yaml /
 
 CMD ["/api.hello2"]
