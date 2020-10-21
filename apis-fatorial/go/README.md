@@ -9,7 +9,9 @@ Para aprender mais sobre a lang existe hoje milhares de sites e blogs com conte�
 Em Go você não precisa instalar nada no Server onde irá hospedar seu sistema em Go, basta levar ou subir o binário que você irá gerar.
 Go é uma linguagem de programação Compilada.
 
-Basta o simples comando abaixo para compilar seu programa em Go.
+Basta o simples comando abaixo para compilar seu programa em Go ou pode utilizar o Makefile para facilitar ainda mais.
+
+Você poderá utilizar o docker e desejar abaixo o manual bonitinho para facilitar.
 
 ### Compilar
 
@@ -29,6 +31,31 @@ Você poderá simplesmente executar sem precisar compilar só para testar.
 ```bash
 
 $ go run main.go
+
+```
+
+### Utilizando Docker
+
+Vamos criar sua imagem
+
+```bash
+
+$ make docker
+
+```
+
+Agora basta executar seu container e prontinho!
+
+```bash
+
+$ docker run --rm --name fatorial -p 8080:8080 jeffotoni/fatorial
+ ┌───────────────────────────────────────────────────┐ 
+ │                    Fiber v2.1.0                   │ 
+ │               http://127.0.0.1:8080               │ 
+ │                                                   │ 
+ │ Handlers ............. 2  Threads ............. 4 │ 
+ │ Prefork ....... Disabled  PID ................. 1 │ 
+ └───────────────────────────────────────────────────┘ 
 
 ```
 
