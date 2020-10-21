@@ -6,7 +6,7 @@ import (
 	"github.com/gofiber/fiber/v2"
 )
 
-const LIM = 41
+const LIM = 1000
 
 var facts [LIM]uint64
 
