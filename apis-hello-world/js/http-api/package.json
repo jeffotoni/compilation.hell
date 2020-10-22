@@ -1,0 +1,24 @@
+{
+  "name": "http-api",
+  "version": "1.0.0",
+  "description": "Simple HTTP Rest API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffotoni/compilation.hell.git"
+  },
+  "keywords": [
+    "http",
+    "api",
+    "rest"
+  ],
+  "author": "Luis Felipe Manfroni",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jeffotoni/compilation.hell/issues"
+  },
+  "homepage": "https://github.com/jeffotoni/compilation.hell#readme"
+}
